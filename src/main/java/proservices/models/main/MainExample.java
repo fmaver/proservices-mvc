@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
+import proservices.models.repositories.RepositorioDeServicios;
 
 public class MainExample implements WithSimplePersistenceUnit {
 
@@ -17,6 +18,13 @@ public class MainExample implements WithSimplePersistenceUnit {
     }
 
     private void start() {
+        RepositorioDeServicios repositorioDeServicios = new RepositorioDeServicios();
+
+        Servicio servicio = new Servicio();
+        servicio.setNombre("Jardinería");
+
+        repositorioDeServicios.guardar(servicio);
+
 
     }
 

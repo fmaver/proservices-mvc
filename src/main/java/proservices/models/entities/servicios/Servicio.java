@@ -16,10 +16,12 @@ public class Servicio extends Persistente {
     @Setter
     private String nombre;
 
+    @Transient
     @Getter
-    @OneToMany(cascade = { CascadeType.PERSIST }, fetch = FetchType.LAZY)
-    @JoinColumn(name = "servicio_id")
+    //@OneToMany(cascade = { CascadeType.PERSIST }, fetch = FetchType.LAZY)
+    //@JoinColumn(name = "servicio_id")
     private List<Tarea> tareas;
+
 
     public Servicio() {
         this.tareas = new ArrayList<>();

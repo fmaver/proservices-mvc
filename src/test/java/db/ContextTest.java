@@ -3,6 +3,7 @@ package db;
 
 import io.github.flbulgarelli.jpa.extras.test.SimplePersistenceTest;
 import org.junit.jupiter.api.Test;
+import proservices.models.repositories.RepositorioDeServicios;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -18,5 +19,6 @@ public class ContextTest implements SimplePersistenceTest {
     withTransaction(() -> {
     });
   }
+
 
 }

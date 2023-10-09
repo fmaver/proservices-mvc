@@ -36,7 +36,9 @@ public class ServiciosController implements ICrudViewsHandler {
 
     @Override
     public void create(Context context) {
-        Servicio servicio = null;
+        Servicio servicio = new Servicio();
+        servicio.setNombre(context.formParam("nombre"));
+
         Map<String, Object> model = new HashMap<>();
         model.put("servicio", servicio);
         context.render("servicios/servicio.hbs", model);
